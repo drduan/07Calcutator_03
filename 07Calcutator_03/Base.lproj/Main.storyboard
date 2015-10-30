@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9052" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9040"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="_7Calcutator_03" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +15,368 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cal.png" translatesAutoresizingMaskIntoConstraints="NO" id="p1R-SD-2DK">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <animations/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="1334" height="750"/>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cSp-Aj-jLp">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" image="9.png">
+                                    <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="highlighted" image="9-down.png"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="-148" y="-407" width="92" height="95"/>
+                                </variation>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FZn-ev-722">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" image="3.png">
+                                    <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="highlighted" image="3-down.png"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="190" y="340" width="92" height="95"/>
+                                </variation>
+                                <connections>
+                                    <action selector="numberButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a5z-gq-fIz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ohf-BW-wka">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" image="2.png">
+                                    <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="highlighted" image="2-down.png"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="99" y="340" width="92" height="95"/>
+                                </variation>
+                                <connections>
+                                    <action selector="numberButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mbC-Y2-CwU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ti5-re-zaz">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" image="6.png">
+                                    <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="highlighted" image="6-down.png"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="190" y="248" width="92" height="95"/>
+                                </variation>
+                                <connections>
+                                    <action selector="numberButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pSl-u3-q5A"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N4t-3Y-QwR">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" image="5.png">
+                                    <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="highlighted" image="5-down.png"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="99" y="248" width="92" height="95"/>
+                                </variation>
+                                <connections>
+                                    <action selector="numberButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rn8-09-Ibg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pcn-Db-vL8">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" image="4.png">
+                                    <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="highlighted" image="4-down.png"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="12" y="248" width="92" height="95"/>
+                                </variation>
+                                <connections>
+                                    <action selector="numberButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hah-Hh-nRf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PmH-QK-19u">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" image="7.png">
+                                    <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="highlighted" image="7-down.png"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="12" y="164" width="92" height="95"/>
+                                </variation>
+                                <connections>
+                                    <action selector="numberButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2ue-Ob-UyC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3yX-lI-mMz">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" image="8.png">
+                                    <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="highlighted" image="8-down.png"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="99" y="164" width="92" height="95"/>
+                                </variation>
+                                <connections>
+                                    <action selector="numberButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e4a-fB-9D0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Vb-82-9si">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" image="9.png">
+                                    <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="highlighted" image="9-down.png"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="190" y="164" width="92" height="95"/>
+                                </variation>
+                                <connections>
+                                    <action selector="numberButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hNm-hG-6k7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="203" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u4Q-Pk-Exz">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" image="Divide.png">
+                                    <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="highlighted" image="Divide-down.png"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="287" y="157" width="92" height="95"/>
+                                </variation>
+                                <connections>
+                                    <action selector="operandPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TR1-Wl-eOY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="202" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KVr-jB-i4g">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" image="Multiply.png">
+                                    <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="highlighted" image="Multiply-down.png"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="285" y="244" width="92" height="95"/>
+                                </variation>
+                                <connections>
+                                    <action selector="operandPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NnD-rZ-mMw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="200" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2AU-gd-IMX">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" image="Plus.png">
+                                    <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="highlighted" image="Plus-down.png"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="284" y="420" width="92" height="95"/>
+                                </variation>
+                                <connections>
+                                    <action selector="operandPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qo3-dw-cTy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I9p-zQ-X4s">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" image="c-down.png">
+                                    <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="highlighted" image="c-down.png"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="12" y="431" width="92" height="95"/>
+                                </variation>
+                                <connections>
+                                    <action selector="clearPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EVw-VG-JIB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yPb-r1-qQI">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" image="Decimal.png">
+                                    <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="highlighted" image="Decimal-down.png"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="185" y="431" width="92" height="95"/>
+                                </variation>
+                                <connections>
+                                    <action selector="decimalPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iYT-7S-yBg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LYy-n6-WlC">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" image="Equals.png">
+                                    <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="highlighted" image="Equals-down.png"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="284" y="505" width="92" height="95"/>
+                                </variation>
+                                <connections>
+                                    <action selector="equalsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FzX-kF-dR2"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="51f-ac-0DH">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="68"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="156"/>
+                                </variation>
+                            </label>
+                            <button opaque="NO" tag="201" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dPn-pT-hvB">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" image="Minus.png">
+                                    <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="highlighted" image="Minus-down.png"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="287" y="332" width="92" height="95"/>
+                                </variation>
+                                <connections>
+                                    <action selector="operandPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EYa-n0-xU2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8so-6r-t3q">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" image="0.png">
+                                    <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="highlighted" image="0-down.png"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="99" y="431" width="92" height="95"/>
+                                </variation>
+                                <connections>
+                                    <action selector="numberButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eAO-NJ-B1e"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AyP-aR-IRS">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" image="1.png">
+                                    <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="highlighted" image="1-down.png"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="12" y="340" width="92" height="95"/>
+                                </variation>
+                                <connections>
+                                    <action selector="numberButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UfL-ee-E2E"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="p1R-SD-2DK"/>
+                                <exclude reference="cSp-Aj-jLp"/>
+                                <exclude reference="FZn-ev-722"/>
+                                <exclude reference="Ohf-BW-wka"/>
+                                <exclude reference="ti5-re-zaz"/>
+                                <exclude reference="N4t-3Y-QwR"/>
+                                <exclude reference="pcn-Db-vL8"/>
+                                <exclude reference="PmH-QK-19u"/>
+                                <exclude reference="3yX-lI-mMz"/>
+                                <exclude reference="6Vb-82-9si"/>
+                                <exclude reference="u4Q-Pk-Exz"/>
+                                <exclude reference="KVr-jB-i4g"/>
+                                <exclude reference="2AU-gd-IMX"/>
+                                <exclude reference="I9p-zQ-X4s"/>
+                                <exclude reference="yPb-r1-qQI"/>
+                                <exclude reference="LYy-n6-WlC"/>
+                                <exclude reference="51f-ac-0DH"/>
+                                <exclude reference="dPn-pT-hvB"/>
+                                <exclude reference="8so-6r-t3q"/>
+                                <exclude reference="AyP-aR-IRS"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="p1R-SD-2DK"/>
+                                <include reference="cSp-Aj-jLp"/>
+                                <include reference="FZn-ev-722"/>
+                                <include reference="Ohf-BW-wka"/>
+                                <include reference="ti5-re-zaz"/>
+                                <include reference="N4t-3Y-QwR"/>
+                                <include reference="pcn-Db-vL8"/>
+                                <include reference="PmH-QK-19u"/>
+                                <include reference="3yX-lI-mMz"/>
+                                <include reference="6Vb-82-9si"/>
+                                <include reference="u4Q-Pk-Exz"/>
+                                <include reference="KVr-jB-i4g"/>
+                                <include reference="2AU-gd-IMX"/>
+                                <include reference="I9p-zQ-X4s"/>
+                                <include reference="yPb-r1-qQI"/>
+                                <include reference="LYy-n6-WlC"/>
+                                <include reference="51f-ac-0DH"/>
+                                <include reference="dPn-pT-hvB"/>
+                                <include reference="8so-6r-t3q"/>
+                                <include reference="AyP-aR-IRS"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="mainLabel" destination="51f-ac-0DH" id="OHF-tV-y3F"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-253.5" y="418"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="0-down.png" width="160" height="160"/>
+        <image name="0.png" width="160" height="160"/>
+        <image name="1-down.png" width="160" height="160"/>
+        <image name="1.png" width="160" height="160"/>
+        <image name="2-down.png" width="160" height="160"/>
+        <image name="2.png" width="160" height="160"/>
+        <image name="3-down.png" width="160" height="160"/>
+        <image name="3.png" width="160" height="160"/>
+        <image name="4-down.png" width="160" height="160"/>
+        <image name="4.png" width="160" height="160"/>
+        <image name="5-down.png" width="160" height="160"/>
+        <image name="5.png" width="160" height="160"/>
+        <image name="6-down.png" width="160" height="160"/>
+        <image name="6.png" width="160" height="160"/>
+        <image name="7-down.png" width="160" height="160"/>
+        <image name="7.png" width="160" height="160"/>
+        <image name="8-down.png" width="160" height="160"/>
+        <image name="8.png" width="160" height="160"/>
+        <image name="9-down.png" width="160" height="160"/>
+        <image name="9.png" width="160" height="160"/>
+        <image name="Cal.png" width="640" height="1136"/>
+        <image name="Decimal-down.png" width="160" height="160"/>
+        <image name="Decimal.png" width="160" height="160"/>
+        <image name="Divide-down.png" width="160" height="160"/>
+        <image name="Divide.png" width="160" height="160"/>
+        <image name="Equals-down.png" width="160" height="160"/>
+        <image name="Equals.png" width="160" height="160"/>
+        <image name="Minus-down.png" width="160" height="160"/>
+        <image name="Minus.png" width="160" height="160"/>
+        <image name="Multiply-down.png" width="160" height="160"/>
+        <image name="Multiply.png" width="160" height="160"/>
+        <image name="Plus-down.png" width="160" height="160"/>
+        <image name="Plus.png" width="160" height="160"/>
+        <image name="c-down.png" width="160" height="160"/>
+    </resources>
 </document>
